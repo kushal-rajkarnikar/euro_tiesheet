@@ -1,0 +1,99 @@
+{
+	"matches": [{
+		"day": "Friday",
+		"date": "10 June",
+		"time": "2100",
+		"venue": "St-Denis",
+		"home": "France",
+		"away": "Romania",
+		"group": "A"
+	}, {
+		"day": "Saturday",
+		"date": "11 June",
+		"time": "1500",
+		"venue": "Lens",
+		"home": "Albania",
+		"away": "Switzerland",
+		"group": "A"
+	}, {
+		"day": "Saturday",
+		"date": "11 June",
+		"time": "1800",
+		"venue": "Bordeaux",
+		"home": "Wales",
+		"away": "Slovakia ",
+		"group ": "B "
+	}, {
+		"day": "Saturday",
+		"date": "11 June",
+		"time": "2100",
+		"venue": "Marseille",
+		"home": "England",
+		"away": "Russia",
+		"group": "B"
+	}, {
+		"day": "Sunday",
+		"date": "12 June",
+		"time": "1500",
+		"venue": "Paris",
+		"home": "Turkey",
+		"away": "Croatia",
+		"group": "D"
+	}, {
+		"day": "Sunday",
+		"date": "12 June",
+		"time": "1800",
+		"venue": "Nice",
+		"home": "Poland",
+		"away": "Northern Ireland",
+		"group": "C"
+	}, {
+		"day": "Sunday",
+		"date": "12 June",
+		"time": "2100",
+		"venue": "Lille",
+		"home": "Germany",
+		"away": "Ukraine",
+		"group": "C"
+	}, {
+		"day": "Monday",
+		"date": "13 June",
+		"time": "1500",
+		"venue": "Toulouse",
+		"home": "Spain",
+		"away": "Republic",
+		"group": "D"
+	}, {
+		"day": "Monday",
+		"date": "13 June",
+		"time": "1800",
+		"venue": "St-Denis",
+		"home": "Republic of Ireland",
+		"away": "Sweden",
+		"group": "E"
+	}, {
+		"day": "Monday",
+		"date": "13 June",
+		"time": "2100",
+		"venue": "Lyon",
+		"home": "Belgium",
+		"away": "Italy",
+		"group": "E"
+	}, {
+		"day": "Tuesday",
+		"date": "14 June",
+		"time": "1800",
+		"venue": "Bordeaux",
+		"home": "Austria",
+		"away": "Hungary",
+		"group": "F"
+	}, {
+		"day": "Tuesday",
+		"date": "14 June",
+		"time": "2100",
+		"venue": "St - Etienne",
+		"home": "Portugal",
+		"away ": "Iceland",
+		"group": "F"
+	}]
+}
