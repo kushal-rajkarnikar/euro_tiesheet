@@ -6,7 +6,7 @@
 
 (function(){ 
 
-var app = angular.module('euro', ['ionic'])
+var app = angular.module('euro', ['ion-sticky'])
 
 
 

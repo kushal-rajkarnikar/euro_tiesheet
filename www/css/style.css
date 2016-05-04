@@ -1,1 +1,18 @@
 /* Empty. Add your own CSS if you like */
+.card{
+	    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	    padding: 15px;
+}
+
+.item{
+
+}
+
+/*.timestamp{
+	font-size: 12px;
+	line-height: 12px;
+}*/
+
+.ion-content{
+	background: #fcfcfc;
+}
