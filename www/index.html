@@ -25,7 +25,7 @@
   <script src="js/app.js"></script>
 
 </head>
-<body ng-app="euro" ng-controller="EuroCtrl">
+<body ng-app="euro" ng-controller="EuroCtrl" class="platform-android">
   <!-- <img src="img/logo.svg" alt="Logo"> -->
   <ion-pane>
       <!-- <ion-header-bar class="bar-stable">
@@ -55,11 +55,11 @@
   </ion-header-bar>
 
   <!-- or <ion-scroll> -->
-  <ion-content ion-sticky>
+  <ion-content ion-sticky="">
   <ion-list>
   <ion-item class="item-divider"> {{matches[0].date}}, {{matches[0].day}}   </ion-item>
   <ion-item ng-repeat="match in matches" class="item" ng-if="matches[0].date==match.date">
-  <div >
+  <div>
 
     <div style="display:inline-block; width:40%; float: left;">
       {{match.home}}  
@@ -78,7 +78,7 @@
 
 <ion-item class="item-divider"> {{matches[1].date}}, {{matches[1].day}}    </ion-item>
 <ion-item ng-repeat="match in matches" class="item" ng-if="matches[3].date==match.date">
-<div >
+<div>
 
   <div style="display:inline-block; width:40%; float: left;">
     {{match.home}}  
