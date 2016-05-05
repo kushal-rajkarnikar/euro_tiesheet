@@ -57,28 +57,13 @@
   <!-- or <ion-scroll> -->
   <ion-content ion-sticky>
   <ion-list>
-  <ion-item class="item-divider"> {{matches[0].date}}, {{matches[0].day}}   </ion-item>
-  <ion-item ng-repeat="match in matches" class="item" ng-if="matches[0].date==match.date">
-  <div >
+  
+  <div ng-repeat="match in matches">
+    <ion-item class="item-divider" ng-if="matches[$index].date!=matches[$index-1].date">
+    {{match.date}}, {{match.day}}  
+  </ion-item>
 
-    <div style="display:inline-block; width:40%; float: left;">
-      {{match.home}}  
-    </div>
-    <div style="display:inline-block; width:20%; float: left;text-align: center" class="timestamp">      
-      <b>
-        {{match.time}}  
-      </b>
-    </div>
-    <div style="display:inline-block; width:40%; text-align: right;">
-      {{match.away}}
-    </div>
-  </div>
-
-</ion-item>
-
-<ion-item class="item-divider"> {{matches[1].date}}, {{matches[1].day}}    </ion-item>
-<ion-item ng-repeat="match in matches" class="item" ng-if="matches[3].date==match.date">
-<div >
+  <ion-item class="item">
 
   <div style="display:inline-block; width:40%; float: left;">
     {{match.home}}  
@@ -91,67 +76,13 @@
   <div style="display:inline-block; width:40%; text-align: right;">
     {{match.away}}
   </div>
-</div>
-
 </ion-item>
 
-<ion-item class="item-divider"> {{matches[4].date}}, {{matches[4].day}}    </ion-item>
-<ion-item ng-repeat="match in matches" class="item" ng-if="matches[4].date==match.date">
-<div>
 
-  <div style="display:inline-block; width:40%; float: left;">
-    {{match.home}}  
-  </div>
-  <div style="display:inline-block; width:20%; float: left;text-align: center" class="timestamp">      
-    <b>
-      {{match.time}}  
-    </b>
-  </div>
-  <div style="display:inline-block; width:40%; text-align: right;">
-    {{match.away}}
-  </div>
 </div>
 
-</ion-item>
 
-<ion-item class="item-divider"> {{matches[7].date}}, {{matches[7].day}}    </ion-item>
-<ion-item ng-repeat="match in matches" class="item" ng-if="matches[7].date==match.date">
-<div>
-
-  <div style="display:inline-block; width:40%; float: left;">
-    {{match.home}}  
-  </div>
-  <div style="display:inline-block; width:20%; float: left;text-align: center" class="timestamp">      
-    <b>
-      {{match.time}}  
-    </b>
-  </div>
-  <div style="display:inline-block; width:40%; text-align: right;">
-    {{match.away}}
-  </div>
-</div>
-
-</ion-item>
-
-<ion-item class="item-divider"> {{matches[10].date}}, {{matches[10].day}}    </ion-item>
-<ion-item ng-repeat="match in matches" class="item" ng-if="matches[10].date==match.date">
-<div>
-
-  <div style="display:inline-block; width:40%; float: left;">
-    {{match.home}}  
-  </div>
-  <div style="display:inline-block; width:20%; float: left;text-align: center" class="timestamp">      
-    <b>
-      {{match.time}}  
-    </b>
-  </div>
-  <div style="display:inline-block; width:40%; text-align: right;">
-    {{match.away}}
-  </div>
-</div>
-
-</ion-item>
-
+ 
 
 </ion-list>
 </ion-content>
