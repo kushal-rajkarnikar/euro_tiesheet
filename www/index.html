@@ -26,7 +26,7 @@
 
 </head>
 <body ng-app="euro" ng-controller="EuroCtrl" class="platform-android">
-  <!-- <img src="img/logo.svg" alt="Logo"> -->
+
   <ion-pane>
       <!-- <ion-header-bar class="bar-stable">
 
@@ -50,40 +50,15 @@
       </div>
     </ion-content> -->
 
-    <ion-header-bar align-title="left" class="bar-positive">
-    <h1 class="title">Euro 2016</h1>
-  </ion-header-bar>
+    <ion-nav-bar align-title="left" class="bar-stable">
+    <!-- <img src="img/logo.svg" alt="Logo"> -->
+    <!-- <h1 class="title">Euro 2016</h1> -->
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
 
-  <!-- or <ion-scroll> -->
-  <ion-content ion-sticky="">
-  <ion-list>
-  <div ng-repeat="match in matches">
-    <ion-item class="item-divider" ng-if="matches[$index].date!=matches[$index-1].date">
-    {{match.date}}, {{match.day}}  
-  </ion-item>
+  <ion-nav-view>
+</ion-nav-view>
 
-  <ion-item class="item">
-  <div style="display:inline-block; width:40%; float: left;">
-    {{match.home}}  
-  </div>
-  <div style="display:inline-block; width:20%; float: left;text-align: center" class="timestamp">      
-    <b>
-      {{match.time}}  
-    </b>
-  </div>
-  <div style="display:inline-block; width:40%; text-align: right;">
-    {{match.away}}
-  </div>
-</ion-item>
-
-
-</div>
-
-
- 
-
-</ion-list>
-</ion-content>
 </ion-pane>
 </body>
 </html>

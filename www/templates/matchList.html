@@ -1,0 +1,39 @@
+<ion-view>
+
+ <!-- or <ion-scroll> -->
+ <ion-content ion-sticky="">
+
+
+ <ion-list>
+ <div ng-repeat="match in matches">
+  <ion-item class="item-divider" ng-if="matches[$index].date!=matches[$index-1].date">
+  {{match.date}}, {{match.day}}  
+</ion-item>
+
+<ion-item class="item">
+<a href="#/match-details">
+  <div style="display:inline-block; width:40%; float: left;">
+    {{match.home}}  
+  </div>
+  <div style="display:inline-block; width:20%; float: left;text-align: center" class="timestamp">      
+    <b>
+      {{match.time}}  
+    </b>
+  </div>
+  <div style="display:inline-block; width:40%; text-align: right;">
+    {{match.away}}
+  </div>
+</a>
+</ion-item>
+
+
+</div>
+
+
+
+
+</ion-list>
+
+</ion-content>
+
+</ion-view>
