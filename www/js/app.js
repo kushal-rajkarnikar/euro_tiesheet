@@ -31,6 +31,8 @@ app.controller('EuroCtrl', function($http, $scope){
 
 });
 
+  
+
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
