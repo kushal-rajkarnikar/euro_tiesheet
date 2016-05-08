@@ -6,7 +6,7 @@
 
 (function(){ 
 
-  var app = angular.module('euro', ['ion-sticky'])
+  var app = angular.module('euro', ['ion-sticky']);
 
   app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('list',{
@@ -15,7 +15,7 @@
     });
 
     $stateProvider.state('details',{
-      url: '/details',
+      url: '/details/:matchId',
       templateUrl: 'templates/details.html'
     });
 
@@ -45,6 +45,9 @@
   });
 
 
+app.controller('matchDetails', function($scope, $state){
+  $scope.matchId = $state.params.matchId;  
+});
 
   app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
