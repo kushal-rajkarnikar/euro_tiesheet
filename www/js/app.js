@@ -8,20 +8,22 @@
 
   var app = angular.module('euro', ['ion-sticky']);
 
-  app.config(function($stateProvider, $urlRouterProvider) {
-    $stateProvider.state('list',{
-      url: '/list',
-      templateUrl: 'templates/list.html'
-    });
+  app.factory('MatchesFactory', ['$http','$rootScope','$stateParams', function($http, $rootScope, $stateParams){
+  return {
+    all: function () {
+      return $http.get('matches.json', { params: { match_id: $rootScope.session } })
+    }
+    // },
+    // get: function () {
+    //   return $http.get('https://friends.json/getOne', { params: { user_id: $rootScope.session, chat_id: $stateParams.idchat } })
+    // },
+    // add: function (id) {
+    //   return $http.get('https://friends.json/new', { params: {idfriends:id}})
+    // }
+  };
+  }]);
 
-    $stateProvider.state('details',{
-      url: '/details/:matchId',
-      templateUrl: 'templates/details.html'
-    });
 
-    $urlRouterProvider.otherwise('/list');
-
-  });
 
   app.controller('EuroCtrl', function($http, $scope){
 
@@ -44,14 +46,39 @@
 
   });
 
+   app.config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider.state('list',{
+      url: '/list',
+      templateUrl: 'templates/list.html'
+    });
 
-app.controller('matchDetails', function($scope, $state){
-  $scope.matchId = $state.params.matchId;  
+    $stateProvider.state('details',{
+      url: '/details/:matchId',
+      templateUrl: 'templates/details.html'
+    });
+
+    $urlRouterProvider.otherwise('/list');
+
+  });
+
+
+app.controller('matchDetails', function($scope, $state, MatchesFactory){
+  $scope.matchId = $state.params.matchId;     
+
+  MatchesFactory.all().success(function (response) {
+    // $scope.matches = response;
+    angular.forEach(response.matches, function(index){
+
+       $scope.matches.push(index);
+
+     });
+  })
 });
 
   app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
       if(window.cordova && window.cordova.plugins.Keyboard) {
+
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
     cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);

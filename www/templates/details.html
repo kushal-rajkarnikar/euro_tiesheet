@@ -1,9 +1,18 @@
 <ion-view view-title="Match Detals">
 <ion-content ng-controller="matchDetails">
  <ion-list>
-  Details
-  for 
-  {{matchId}}
+ <ion-item>  
+  {{matches[matchId-1].home}} Vs {{matches[matchId].away}}
+  </ion-item>
+  <ion-item>  
+  Date: {{matches[matchId-1].date}}, 2016
+  </ion-item>
+  <ion-item>  
+  Time: {{matches[matchId-1].time}} Hours
+  </ion-item>
+  <ion-item>  
+  Venue: {{matches[matchId-1].venue}}
+  </ion-item>
  </ion-list>
 </ion-content>
 </ion-view>
